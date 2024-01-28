@@ -1,23 +1,24 @@
 # DeepLabv3plus
-## 文件夹内容
+## Folder Contents
 ### _logs_
-存储训练好的模型
+Stores trained models
 ### _pretrained_
-预训练好的deeeplabv3+
+Pre-trained DeepLabv3+ models
 ### *weizmann_horse_db*
-数据集以及预测的结果
-## 代码介绍以及使用方法
-### 代码功能
-* annotation.py用于分割数据集
-* Mobilnetv2.py是backbone
-* model.py是构造网络模型
-* Mydataset.py制作数据集并进行数据预处理
-* train.py用于训练网络
-* predict.py生成结果
-* iou.py对结果进行评估
+Dataset and prediction results
+## Code Overview and Usage
+### Code Functionality
+* `annotation.py` is used for segmenting the dataset
+* `Mobilnetv2.py` is the backbone
+* `model.py` constructs the network model
+* `Mydataset.py` prepares the dataset and performs data preprocessing
+* `train.py` for training the network
+* `predict.py` generates results
+* `iou.py` evaluates the results
 
-### 使用方法
-1.  首先使用annotation脚本分割数据集，并生成包含数据集图片名字的文件
-2.  然后利用预训练好的模型，运行train文件生成训练好的模型，注意模型的输出路径
-3.  找到训练好的模型，运行predict脚本输出结果，可以输出一张图片看效果，也可以将整个数据集输出
-4.  最后用mIou和boundary Iou评估结果
+### Usage Instructions
+1.  First, use the `annotation` script to segment the dataset and generate a file containing the names of dataset images.
+2.  Then, using the pre-trained model, run the `train` file to generate a trained model, paying attention to the model's output path.
+3.  Locate the trained model, run the `predict` script to output results. You can output a single image to see the effect or output the entire dataset.
+4.  Finally, evaluate the results using mean Intersection over Union (mIoU) and boundary IoU.
+
